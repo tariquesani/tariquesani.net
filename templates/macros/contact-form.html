@@ -1,0 +1,23 @@
+{% macro render_contact_form() %}
+ <div class="contact-form">
+   <div id="contact-wrapper">
+    <div class="contact-content">
+     <div id="formmessage">Success/Error Message Goes Here</div>
+       <form class="form-horizontal" id="contactform" method="post" action="php/contact-form.php">
+          <div class="contact-form">
+            <h4>Drop me a line</h4>
+            <p>Use this form to tell me about your project, ideas or needs. I will be in touch with you soon.</p>
+               <input id="name" type="text" placeholder="Name*"  name="name">
+               <input type="email" placeholder="Email*" name="email">
+               <textarea class="input-message" placeholder="Comment*" rows="7" name="message"></textarea>
+             <input type="hidden" name="action" value="sendEmail"/>
+             <div class="g-recaptcha" data-sitekey="6Lcc3igTAAAAABeRSgaKtmrh5z-iubOMagyzvnsK" data-theme="dark" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;" ></div>             
+            <button id="submit" name="submit" type="submit" value="Send" class="button-small"> Say Hello! </button>
+          </div> 
+        </form>
+        <div id="ajaxloader" style="display:none"><img class="center-block" src="images/ajax-loader-white.gif" alt=""></div>
+   </div>
+   <a href="#" class="contact-toggle"><span class="ti-comments"></span></a>
+  </div>
+ </div>
+{% endmacro %}
