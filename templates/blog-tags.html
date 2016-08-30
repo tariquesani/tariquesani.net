@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% from "macros/blog-tags.html" import render_tags_nav %}
+{% block title %}Blog Tags{% endblock %}
+{% block body %}
+  <h1>Blog Tags</h1>
+  {{ render_tags_nav(active=none) }}
+{% endblock %}

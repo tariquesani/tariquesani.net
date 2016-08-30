@@ -1,0 +1,33 @@
+{% extends "module_layout.html" %}
+{% from "macros/blog-block.html" import render_blog_block %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}Refreshed{% endblock %}
+{% block body %}
+ <section class="blog blog-page white-bg page-section">
+ <div class="container-fluid">
+  {% for child in this.pagination.items %}
+  	{% if loop.index is equalto 1 %}
+  		<div class="row"><!-- Index is 1 -->
+  	{% endif%}	
+    	{{ render_blog_block(child) }}
+    {% if loop.index is divisibleby 2 %}
+      <div class="clearfix visible-sm-block"></div>
+      <div class="clearfix visible-md-block"></div>
+    {% endif %}
+  	{% if loop.index is divisibleby 4 %}  	    
+  		</div><!-- End row -->
+  		{% if loop.length > loop.index %}
+  			<div class="row"> <!-- {{ loop.index }} -->
+  		{% endif %}
+  	{% endif%}
+  	{% if (loop.last) and (not (loop.index is divisibleby 4)) %}
+  			</div><!-- End row in last-->
+  	{% endif %}
+  	
+  {% endfor %}
+  {% if this.pagination.pages > 1 %}
+    {{ render_pagination(this.pagination) }}
+  {% endif %}
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% set posts = site.query('/blog').include_hidden(false).all() %}
+{% if posts %}
+  {% set new_month = '' %}
+  {#  create a dict or it will not work #}
+  {% set x = {1:2} %}
+  {% for post in posts %}
+    {% set this_month = post.pub_date.strftime('%B %Y') %}
+    {% set this_month_number = post.pub_date.strftime('%m') %}
+    {% set this_year = post.pub_date.strftime('%Y') %}
+    {% if not x[this_month] %}
+      {% set this_month_count = 0 %}
+    {% else %}
+      {% set this_month_count = x[this_month]%}
+    {% endif %}
+    {% set this_month_count = this_month_count + 1%}
+    {# Silly way to update a dict #}
+    {% set _dummy = x.update({this_month:this_month_count}) %}
+    {# Check if the month has changed? #}
+    {% if this_month != new_month %}
+      {# Skip the blank first month #}
+      {% if x[new_month] %}
+        <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month }} ({{x[new_month]}})</a></li>
+      {% endif %}
+      {% set new_month =  this_month %}
+      {% set new_month_number =  this_month_number %}
+      {% set new_year =  this_year %}
+    {% endif%}
+    {% if(loop.last) %}
+       <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month }} ({{x[new_month]}})</a></li>
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.year }}{% endblock %}
+{% block body %}
+  <header class="page-header">
+    <h1 class="page-title">Year: {{ this.year }}</h1>      
+  </header>
+  {% for archive, items in this.items_by_months %}
+        {% for post in items %}
+          {{ render_blog_post(post, from_index=true) }}
+        {% endfor %}
+  {% endfor %}  
+{% endblock %}

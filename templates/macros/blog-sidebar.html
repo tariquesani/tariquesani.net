@@ -1,0 +1,57 @@
+{% macro render_blog_sidebar(post) %}       
+       <div class="slidebar">
+          <div class="author">
+            <div class="author-details">
+                <div class="author-avtar">
+                  <img class="img-responsive" src="/images/my-photo.jpg" alt="">
+                </div>
+                <div class="author-name">
+                  <h4>Tarique Sani</h4>
+                  <b>Do what <br /> you love</b>
+                </div>
+            </div>
+            <div class="author-content"> 
+             <p>Pediatrician and a Forensic Expert. A passionate PHP geek. Currently CTO, SANIsoft. Also a cyclist, photographer, bird watcher, nature lover and a FOSS enthusiast.</p>
+            </div>
+          </div>
+          <div class="slidebar-share">
+              <h4>Social Links : </h4>
+              <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest-p"></i> </a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
+            </ul>
+           </div> 
+          <div class="slidebar-link">            
+            <h3><a href="#">More about me</a></h3>
+            <ul>
+              <li><a href="#">A pediatrician and a forensic expert how did I become a php geek?</a></li>
+            </ul>
+          </div>
+          <div class="slidebar-link">            
+            <h3><a href="/coppermine">Coppermine Gallery</a></h3>
+            <ul>
+              <li><a href="#">Demo of an Open Source project which I led to 3 million downloads</a></li>
+            </ul>
+          </div>
+          <div class="slidebar-link">            
+            <h3><a href="http://sanisoft.com" >SANIsoft</a></h3>
+            <ul>
+              <li><a href="#">High performance and scalable PHP web application development</a></li>
+            </ul>
+          </div>
+          <div class="slidebar-link">            
+            <h3><a href="http://shdlr.com">Shdlr</a></h3>
+            <ul>
+              <li><a href="#">The online conference schedule creator</a></li>
+            </ul>
+          </div>                    
+           <div class="slidebar-link">
+            <h3>Archive</h3>
+            <ul id="sidebararchives">
+              <!-- Sidebar Archives gets loaded here using javascript -->
+            </ul>
+          </div>
+       </div><!-- slidebar -->
+{% endmacro %}

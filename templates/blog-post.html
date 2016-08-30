@@ -1,0 +1,45 @@
+{% extends "module_layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block intro %}
+  {% set image = this.attachments.get(this.featured_image) %}
+  <div class="page-header bg gradient-01" style="background: url('{{ image.thumbnail(1920,800,crop=true) | url }}')">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="top-bar clearfix">
+          <div class="back-home pull-left">
+            <a href="{{'/refreshed'| url }}"><span class="ti-angle-left"></span> back to blog</a>
+          </div>
+          <ul class="breadcrumb pull-right">
+            <li><a href="{{'/'| url }}"><span class="ti-home"></span> Home</a></li>
+            <li><a href="{{'/refreshed/'| url }}"> Blog</a></li>
+            <li class="active">Blog Post</li>        
+          </ul>
+        </div>
+        <div class="page-header-title">
+           <h1>{{ this.title }}</h1>
+            <div class="blog-meta">
+              <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
+              <p><span class="ti-folder"></span> 
+              {% for c in this.categories %}
+	              {% set category = site.get('/blog-categories/'+c) %}
+	              {% if category %}
+	                <a href="{{ category|url }}" rel="category tag">{{ category.name }}</a>
+	              {% endif %}
+              {% endfor%}
+              </p>
+              <p style="color: #ffffff;">
+              	<span class="ti-calendar"></span>
+              	{# Link this to month and year archives #}
+              	{{this.pub_date.strftime('%B %d, %Y')}}
+              </p>
+            </div>
+        </div>
+       </div>
+    </div>
+  </div>
+{% endblock%}
+
+{% block body %}
+  {{ render_blog_post(this) }}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "module_layout.html" %}
+{% from "macros/album-block.html" import render_album_block %}
+{% from "macros/pagination.html" import render_pagination %}
+
+{% block title %}Photos{% endblock %}
+{% block intro %}
+  <div class="page-header bg gradient-01">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="top-bar clearfix">
+          <div class="back-home pull-left">
+            <a href="{{'/'| url }}"><span class="ti-angle-left"></span> back to home</a>
+          </div>
+          <ul class="breadcrumb pull-right">
+            <li><a href="{{'/'| url }}"><span class="ti-home"></span> Home</a></li>
+            <li class="active">Photos</li>        
+          </ul>
+        </div>
+        <div class="page-header-title">
+           <h1>Photos</h1>
+           <span>Visual journeys</span>
+        </div>
+       </div>
+    </div>
+  </div>
+{% endblock%}
+
+{% block body %}
+<section id="portfolio" class="portfolio white-bg page-section">
+ <div class="container-fluid">
+  <div class="isotope popup-portfolio full-screen">
+  {% for child in this.pagination.items %}
+  	{{ render_album_block(child) }}
+  {% endfor %}
+  {% if this.pagination.pages > 1 %}
+    {{ render_pagination(this.pagination) }}
+  {% endif %}
+  </div>
+ </div>
+</section>
+{% endblock %}

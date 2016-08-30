@@ -1,0 +1,17 @@
+{% macro render_blog_post(post, from_index=false) %}
+{% from "macros/blog-sidebar.html" import render_blog_sidebar %}
+<section class="blog blog-single white-bg page-section-pt">
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-9 col-md-9">
+  <div class="content">
+  {{ post.body }}
+  </div><!-- content -->
+  </div><!-- col-lg-9 -->
+  <div class="col-lg-3 col-md-3">
+  {{ render_blog_sidebar(post) }}
+  </div> <!-- col-lg-3 -->
+  </div><!-- row -->
+ </div><!-- container-fluid -->
+</section>  
+{% endmacro %}

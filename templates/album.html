@@ -1,0 +1,106 @@
+{% extends "module_layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block intro %}
+  {% set featured_image = this.attachments.get(this.featured_image) %}
+  <div class="page-header bg gradient-01" style="background: url('{{ featured_image.thumbnail(1920,800,crop=true) | url }}')">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="top-bar clearfix">
+          <div class="back-home pull-left">
+            <a href="{{'/photos/'| url }}"><span class="ti-angle-left"></span> back to photos</a>
+          </div>
+          <ul class="breadcrumb pull-right">
+            <li><a href="{{'/'| url }}"><span class="ti-home"></span> Home</a></li>
+            <li><a href="{{'/photos/'| url }}"> Photos</a></li>
+            <li class="active"> Album</li>        
+          </ul>
+        </div>
+        <div class="page-header-title">
+           <h1>{{ this.title }}</h1>
+            <div class="blog-meta">
+              <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
+              <p><span class="ti-folder"></span> 
+              {% for c in this.categories %}
+	              {% set category = site.get('/blog-categories/'+c) %}
+	              {% if category %}
+	                <a href="{{ category|url }}" rel="category tag">{{ category.name }}</a>
+	              {% endif %}
+              {% endfor%}
+              </p>
+              <p style="color: #ffffff;">
+              	<span class="ti-calendar"></span>
+              	{# Link this to month and year archives #}
+              	{{this.pub_date.strftime('%B %d, %Y')}}
+              </p>
+            </div>
+        </div>
+       </div>
+    </div>
+  </div>
+{% endblock%}
+
+{% block body %}
+  <section class="single-portfolio-post page-section-pt">
+  <div class="container-fluid">
+     <div class="row">
+      <div class="col-lg-6 col-md-6 popup-album">
+          {% for blk in this.images.blocks %}
+            {%set image = this.attachments.get(blk.image)%}
+            {% if loop.index == 1 %}
+              <a href="{{image|url}}" class="album-img thumbnail" title="{{blk.caption|striptags}}" ><img src="{{ image.thumbnail(800)|url}}" alt="{{blk.caption|striptags}}" class="img-responsive"></a>
+            {% else %}
+              <div class="col-lg-3 col-sm-4 col-6">
+              <a href="{{image|url}}" title="{{blk.caption}}" class="album-img thumbnail">
+              <img src="{{image.thumbnail(400,400,crop=true)|url}}" alt="{{blk.caption|striptags}}" class="img-responsive">
+              </a>
+              </div>
+            {% endif %}
+          {% endfor%}
+      </div>
+      <div class="col-lg-6 col-md-6 clearfix">
+         <div class="port-title">
+            <h2>{{ this.title }}</h2>
+         </div>
+          <div class="port-meta clearfix">
+            <ul>
+              <li><b>Release:</b><span>07/07/2020 </span></li>
+              <li><b>Client:</b><span>Your client name</span></li>
+              <li><b>Live Demo: </b><span>www.projecturl.com</span></li>
+              <li><b>Date: </b><span>September 26, 2015</span></li>
+              <li><b>Skills: </b><span>Design, Photography, HTML, jQuery</span></li>
+            </ul>
+          </div>
+          <div class="port-info">
+              <p>Step out on to the path to your left. Where there is no change. Briefly imagine that you are not going to live and discover your unfulfilled dreams. Instead, you continue doing what you have in the past. What will life be like in 10 years time? Step out, every step you take you get older, days pass, weeks pass. Notice how your body is, how your mind is, how you feel about staying on this path. <br> <br>
+              Walk out into your future to the 10 year point. Walk out 10 years into your future and feel how it feels to carry on doing the same thing. This path is just like today, with one difference: you have 10 fewer years remaining in your life. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life be like?</p>
+
+              <p>Lorem ipsum dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. <br> <br>
+
+              Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative </p>
+           </div>
+       </div>
+    </div>
+  <!--=================================-->
+   <div class="row">
+    <div class="col-ld-12 col-md-12">
+      <div class="port-post clearfix">
+       <div class="port-post-photo">
+          <img src="/images/my-photo.jpg" alt="">
+        </div> 
+        <div class="port-post-info">
+          <h3 class="text-blue"><span>Posted by :</span> Tarique Sani</h3>
+          <div class="port-post-social pull-right">
+            <strong>Follow on:</strong>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+          </div>
+          <p>Really experience that. See what you see, hear what you hear, feel the feelings. Disappointment? Anger? Frustration? Failure? How does that feel? How do you affect those around you? How do they feel? Absorb every aspect of this path that you can take today if you so choose. Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change. Drift back to where the path splits. Step Five: Now take a step out on to the path to the right. This is where you create powerful, progressive change. Notice the sense of freedom in your thoughts, the sense of accomplishment and walk out 10 years into your future. Imagine you are 10 years into the future but this time it’s different. Why? Because starting today you actually begin making changes in your life. Specific intentional changes are not easy. They are intentional because these changes are changes that you are choosing and they are the changes that will cause you to live.</p>
+        </div>
+      </div>
+     </div>
+   </div>
+ <!--=================================-->
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.date|dateformat('MMMM yyyy') }} {% endblock %}
+{% block body %}
+  <header class="page-header">
+    <h1 class="page-title">Month: {{ this.date|dateformat('MMMM yyyy') }}</h1>      
+  </header>
+  
+  {% for post in this.items %}
+	{{ render_blog_post(post, from_index=true) }}
+  {% endfor %}
+  
+{% endblock %}

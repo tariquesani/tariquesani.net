@@ -1,0 +1,19 @@
+#!/bin/bash
+echo Processing $1;
+
+banner_file="banner_"$1;
+
+if [ ! -f $banner_file ]; then
+	echo "Banner file not found"
+	smartcrop --facedetection --width 1920 --height 800 $1  $banner_file;
+	echo $banner_file created;	
+	jpegoptim $banner_file --size=100; 
+fi
+
+block_file="block_"$1;
+
+if [ ! -f $block_file ]; then
+	echo "Block file not found"
+	smartcrop --facedetection --width 800 --height 600 $1  $block_file;
+	echo $block_file created;	
+fi

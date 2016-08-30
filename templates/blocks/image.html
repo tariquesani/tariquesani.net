@@ -1,0 +1,7 @@
+{% set image = record.attachments.get(this.image) %}
+<figure>
+    <img src="{{ image|url }}" alt="" class = "img-responsive">
+       <figcaption class="caption">
+       {{ this.caption }}
+       </figcaption>
+</figure>

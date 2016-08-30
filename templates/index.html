@@ -1,0 +1,491 @@
+{% from "macros/blog-block.html" import render_blog_block %}
+{% from "macros/album-block.html" import render_album_block %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="Sam Martin - Personal Vcard Resume HTML Template" />
+<meta name="author" content="potenzaglobalsolutions.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Tarique Sani - Pediatrician and a Forensic Expert. A passionate PHP geek. Currently CTO, SANIsoft. Also a cyclist,  photographer, bird watcher, nature lover and a FOSS enthusiast.</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{ '/favicon.ico' | url }}" />
+
+<!-- bootstrap -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- google font -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200italic,200,300,300italic,400italic,500,500italic,600,600italic,700italic,900italic,900,800,700,800italic' rel='stylesheet' type="text/css" />
+ 
+<!-- themify icon -->
+<link href="/css/themify-icons.css" rel="stylesheet" type="text/css" />
+
+<!-- font awesome  -->
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<!-- magnific popup -->
+<link href="/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+
+<!-- jquery-ui -->
+<link rel='stylesheet' href='/css/jquery-ui.css'>
+ 
+<!-- main style -->
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- responsive -->
+<link href="/css/responsive.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<!--=================================
+  loading -->
+
+ <div id="loading">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object" id="object_one"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_three"></div>
+      <div class="object" id="object_four"></div>
+  </div>
+ </div>
+</div>
+
+<!--=================================
+  loading -->
+
+
+<!--=================================
+  header -->
+   
+ <header class="header" id="home">
+	<nav id="menu" class="navbar navbar-default">
+	  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ 	    <a class="navbar-brand" href="{{'/'|url}}"> <img id="logo_img" src="/images/tariquesani_logo.png" alt=""> </a>
+	  </div>
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+	    <ul id="navbar" class="nav navbar-nav navbar-right">
+	      <li class="active"><a href="#home" class="page-scroll">Home</a></li>
+	      <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#blog" class="page-scroll">Blog: Refreshed</a></li>
+        <li><a href="#portfolio" class="page-scroll">Photos</a></li>        
+        <li><a href="#contact" class="page-scroll">Contact</a></li>
+          <li>
+            <form>
+              <div class="form-group">
+                  <input type="text" class="form-control" style="background-color: transparent; color: #fff;" placeholder="Search">
+              </div>
+            </form>
+        </li>        
+	    </ul>
+   </div> 
+</nav>
+</header>
+
+<!--=================================
+  header -->
+
+
+<!--=================================
+  intro --> 
+ 
+  <div class="intro-bg gradient-01" style="background: url('/images/bg.jpg');">
+   <div id="scroll-down" class="intro">
+    <div class="intro-content">
+      <div class="container-fluid">
+      <div class="row">
+       <div class="col-md-12 text-center">
+         <h1> <span> Hello i’m </span> Tarique Sani </h1>
+         <div id="typer"><h2>Pediatrician and a Forensic Expert. A passionate PHP geek. Currently CTO, SANIsoft. Also a cyclist, photographer, bird watcher, nature lover and a FOSS enthusiast.</h2></div>
+          <!--
+          <div class="button-large">
+          	<a href="#">Download my CV</a>
+          </div>
+          -->
+        </div>
+       </div>
+     </div>
+     </div>
+    <a class="scroll-down page-scroll" title="Scroll Down" href="#about"><i></i></a>
+  </div>
+</div>
+   
+<!--=================================
+  intro --> 
+
+
+<!--=================================
+  about --> 
+
+<section id="about" class="about white-bg page-section">
+ <div class="container-fluid">
+   <div class="row">
+   	 <div class="col-lg-4 col-md-4 col-sm-4">
+   	   <div class="about-image">
+   	   	 <img class="img-responsive" src="images/me.jpg" alt="">
+   	   </div>	
+   	   <div class="about-social">
+   	   	 <ul>
+   	   	  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
+          <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+          <li><a href="#"><i class="fa fa-pinterest-p"></i> </a></li>
+          <li><a href="#"><i class="fa fa-behance"></i> </a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
+   	   	 </ul>
+   	   </div>
+   	 </div>
+   	 <div class="col-lg-8 col-md-8 col-sm-8"> 
+   	 	<div class="section-title">
+   	 	  <div class="section-title-name">
+   	 	  	<span>Know about me</span>
+   	 	  	<h2>About Me</h2>
+   	 	  </div>	
+   	 	  <div class="title-name-gray">
+   	 	  	<strong>About me</strong>
+   	 	  </div>
+   	 	</div>
+   	 	<div class="contact-block"> 
+   	 	 <div class="row">  
+   	 	 	<div class="col-lg-4 col-md-4 col-sm-4">
+   	 	 		<div class="my-contact clearfix">
+   	 	 			<div class="contact-icon">
+   	 	 				<span class="ti-user"></span>
+   	 	 			</div>
+   	 	 			<div class="contact-info">
+   	 	 				<h4>Name:</h4>
+   	 	 				<p>Tarique Sani</p>
+   	 	 			</div>
+   	 	 		</div>
+   	 	 	</div>
+   	 	 	<div class="col-lg-8 col-md-8 col-sm-8">
+   	 	 		<div class="my-contact clearfix">
+   	 	 			<div class="contact-icon">
+   	 	 				<span class="ti-email"></span>
+   	 	 			</div>
+   	 	 			<div class="contact-info">
+   	 	 				<h4>Email:</h4>
+   	 	 				<p><a href="mailto:tarique@sanisoft.com">tarique@sanisoft.com</a></p>
+   	 	 			</div>
+   	 	 		</div>
+   	 	 	</div>
+   	 	 <div class="row">  
+   	 	 	<div class="col-lg-4 col-md-4 col-sm-4">
+   	 	 		<div class="my-contact clearfix">
+   	 	 			<div class="contact-icon">
+   	 	 				<span class="ti-calendar"></span>
+   	 	 			</div>
+   	 	 			<div class="contact-info">
+   	 	 				<h4>Date of birth: </h4>
+   	 	 				<p>19 September 1966</p>
+   	 	 			</div>
+   	 	 		</div>
+   	 	 	</div>
+   	 	 	<div class="col-lg-8 col-md-8 col-sm-8">
+   	 	 		<div class="my-contact clearfix">
+   	 	 			<div class="contact-icon">
+   	 	 				<span class="ti-direction-alt"></span>
+   	 	 			</div>
+   	 	 			<div class="contact-info">
+   	 	 				<h4>Address: </h4>
+   	 	 				<p>15, Atomic Energy Road. Wadi, Nagpur. India- 440023</p>
+   	 	 			</div>
+   	 	 		</div>
+   	 	 	</div>
+   	 	 </div>	
+   	 	 <div class="row">
+   	 	 	<div class="col-lg-12 col-md-12">
+   	 	 	  <div class="about-block clearfix">
+          <p>Founder and CTO: Technical Team lead at SANIsoft.com and Chief Technical Architect Shdlr.com</p>
+
+          <p>Specialties : In Depth understanding of web development, Servers, Scaling applications for High performance and High availability, User experience and Usability, Test Driven Development and Continuous Integration.</p>
+
+          <p>Technologies : PHP, PHP frameworks, CakePHP, Laravel, MySQL, Javascript,  Apache, Linux.</p>
+
+          <p>Other: A serious amateur wildlife photographer. Published in more than 50 journals and ornithology books across the world. Understands Stock markets, fundamental and technical analysis of companies. Certified as a Rational Emotive Behavioral Therapy Level 1 trainer by Morphicminds.</p>
+
+   	 	 	</div>
+   	 	   </div>
+   	 	 </div>
+   	 	</div>
+   	 </div>
+   </div>		
+ </div>
+</section>
+
+<!--=================================
+  about --> 
+
+
+<!--=================================
+ blog --> 
+
+<section id="blog" class="blog white-bg page-section">
+ <div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-12 col-md-12">
+   <div class="section-title">
+       <div class="section-title-name">
+          <span>My Latest Blog Posts</span>
+            <h2>From the blog </h2>
+        </div>  
+        <div class="title-name-gray">
+        <strong>Blog</strong>
+       </div>
+     </div>
+  </div>
+   </div> 
+ <div class="row">
+  {% set posts = site.get('/blog').pagination.items.limit(4)%}
+  {% for post in posts %}
+    {{ render_blog_block(post) }}
+      {% if loop.index is divisibleby 2 %}
+        <div class="clearfix visible-sm-block"></div>
+        <div class="clearfix visible-md-block"></div>
+      {% endif %}
+  {% endfor %}
+ </div>
+ <div class="row">
+     <div class="col-lg-12 col-md-12 text-center button-large">
+      <a href="{{'/blog'|url}}">See all blog posts!</a>
+      <br><br>
+     </div>
+ </div>
+ </div>
+</section>
+
+<!--=================================
+ blog -->
+
+<!--=================================
+ portfolio --> 
+
+<section id="portfolio" class="portfolio white-bg page-section">
+ <div class="container-fluid">
+  <div class="row">
+  <div class="col-lg-12 col-md-12">
+   <div class="section-title">
+       <div class="section-title-name">
+          <span>Featured Albums</span>
+            <h2>My Photography</h2>
+        </div>  
+        <div class="title-name-gray">
+        <strong>Photos</strong>
+       </div>
+     </div>
+  </div>
+  </div> 
+  <div class="isotope popup-portfolio full-screen">
+  {% set albums = site.get('/photos').pagination.items.limit(4)%}
+  {% for album in albums %}
+    {{ render_album_block(album) }}
+  {% endfor %}
+   </div>
+<div class="row">
+     <div class="col-lg-12 col-md-12 text-center button-large">
+      <a href="{{'/photos'|url}}">See all photo albums!</a>
+      <br><br>
+     </div>
+ </div>   
+  </div>
+</section>
+
+<!--=================================
+ portfolio --> 
+
+<!--=================================
+ more --> 
+
+<section id="more" class="blog white-bg page-section">
+ <div class="container-fluid">
+   <div class="row">
+  <div class="col-lg-12 col-md-12">
+   <div class="section-title">
+       <div class="section-title-name">
+          <span>More about me</span>
+            <h2>Other places and projects</h2>
+        </div>  
+        <div class="title-name-gray">
+        <strong>More</strong>
+       </div>
+     </div>
+  </div>
+   </div> 
+ <div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="blog-block">
+      <div class="blog-image">
+         <img class="img-responsive" src="/images/home/oldblog.jpg" alt="">
+      </div>
+      <div class="blog-info">
+        <div class="blog-content">
+          <a href="/blog/" target="_blank" >The old blog!</a>
+          <p>My old blog was powered by Wordpress and has more than 1000 posts dating back to 2002.</p>
+          <div class="blog-bottom clearfix">
+           <div class="button-small">
+            <a href="/blog/" target="_blank" >Visit...</a>
+            </div>  
+         </div>
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="blog-block">
+      <div class="blog-image">
+         <img class="img-responsive" src="/images/home/coppermine.jpg" alt="">
+      </div>
+      <div class="blog-info">
+        <div class="blog-content">
+          <a href="/coppermine/" target="_blank" >Coppermine Gallery</a>
+          <p>Demo of an Open Source project which I led to more than 3 million downloads.</p>
+          <div class="blog-bottom clearfix">
+           <div class="button-small">
+            <a href="/coppermine/" target="_blank" >Visit...</a>
+            </div>  
+         </div>
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="clearfix visible-sm-block"></div>
+  <div class="clearfix visible-md-block"></div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="blog-block">
+      <div class="blog-image">
+         <img class="img-responsive" src="/images/home/sanisoft.jpg" alt="">
+      </div>
+      <div class="blog-info">
+        <div class="blog-content">
+          <a href="http://sanisoft.com" target="_blank">SANIsoft</a>
+          <p>We do high performance and scalable PHP web application development.</p>
+          <div class="blog-bottom clearfix">
+           <div class="button-small">
+            <a href="http://sanisoft.com" target="_blank">Visit...</a>
+            </div>  
+         </div>
+        </div>
+      </div>
+   </div>
+
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="blog-block">
+      <div class="blog-image">
+         <img class="img-responsive" src="/images/home/shdlr.jpg" alt="">
+      </div>
+      <div class="blog-info">
+        <div class="blog-content">
+          <a href="http://shdlr.com" target="_blank">Shdlr</a>
+          <p>The easy to use online conference schedule creator.</p>
+          <div class="blog-bottom clearfix">
+           <div class="button-small">
+            <a href="http://shdlr.com" target="_blank">Visit...</a>
+            </div>  
+         </div>
+        </div>
+      </div>
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+<!--=================================
+ more -->
+
+ 
+<!--=================================
+ contact --> 
+
+<section id="contact" class="google-map white-bg page-section-pt">
+ <div class="container-fluid">
+  <div id="google-map">
+	 <div id="map-canvas"></div>
+ </div>
+ <div class="contact">  
+ 	<h2>Say Hi to me! </h2>
+ 	<div class="address">
+ 	  <ul>
+ 	  	<li><span class="ti-location-pin"></span><p>15, Atomic Energy Road. Wadi, Nagpur. India- 440023</p></li>
+ 	  	<li><span class="ti-marker-alt"></span> <p><a href="mailto:tarique@sanisoft.com">tarique@sanisoft.com</a></p></li>
+ 	  </ul>
+ 	</div>
+ 	<div class="social">
+ 	 <h4>I'm also on Social Networks</h4>
+ 	 <p>Follow me on social networks to get the latest news, blog, updates and much more.</p>
+	 <ul>
+ 	  	 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-dribbble"></i> </a></li>
+         <li><a href="#"><i class="fa fa-vimeo"></i> </a></li>
+         <li><a href="#"><i class="fa fa-pinterest-p"></i> </a></li>
+         <li><a href="#"><i class="fa fa-behance"></i> </a></li>
+         <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
+ 	  </ul>
+ 	</div>
+ </div>
+ <div class="contact-form">
+   <div id="contact-wrapper">
+    <div class="contact-content">
+     <div id="formmessage">Success/Error Message Goes Here</div>
+       <form class="form-horizontal" id="contactform" method="post" action="php/contact-form.php">
+          <div class="contact-form">
+            <h4>Drop me a line</h4>
+            <p>Use this form to tell me about your project goals and needs. I will be in touch within 24 hours.</p>
+               <input id="name" type="text" placeholder="Name*"  name="name">
+               <input type="email" placeholder="Email*" name="email">
+               <input type="text" placeholder="Phone*" name="phone">
+               <textarea class="input-message" placeholder="Comment*" rows="7" name="message"></textarea>
+             <input type="hidden" name="action" value="sendEmail"/>
+            <button id="submit" name="submit" type="submit" value="Send" class="button-small"> Say Hello! </button>
+          </div> 
+        </form>
+        <div id="ajaxloader" style="display:none"><img class="center-block" src="images/ajax-loader-white.gif" alt=""></div>
+   </div>
+   <a href="#" class="contact-toggle"><span class="ti-comments"></span></a>
+  </div>
+ </div>
+ </div>
+</section>
+
+<!--=================================
+ contact --> 
+ 
+<!--=================================
+ javascript --> 
+ 
+<!-- jquery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- modernizr -->
+<script type="text/javascript" src="js/modernizr.min.js"></script>
+
+<!-- Plugins -->
+<script type="text/javascript" src='js/plugins.js'></script>
+
+<!-- map script -->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/map-scripts.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="js/datepicker-script.js"></script>
+
+<!-- custom -->
+<script type="text/javascript" src="js/custom.js"></script>
+ 
+</body>
+</html> 

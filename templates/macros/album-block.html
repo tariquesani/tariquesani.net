@@ -1,0 +1,23 @@
+{% macro render_album_block(album) %}
+    <div class="grid-item web-design graphic-design">
+      <div class="portfolio-item">
+     <div class="item">
+      <div class="item-hover">
+         <div class="item-inner">
+          {% if album.featured_image %}
+            {% set featured_image = album.attachments.get(album.featured_image)%}              
+            <img class="img-responsive" src="{{ featured_image.thumbnail(800,800,crop=true)|url }}" alt="">
+          {% endif %}
+         </div>
+         <div class="item-info">
+         <a href="{{ album|url }}">{{ album.title }}</a>
+          <span>by Tarique Sani</span>
+          <div class="item-link">
+           <a href="{{ album|url }}"><span class="ti-eye"></span> View Album</a>
+          </div>
+           </div>
+        </div>
+       </div>      
+        </div>
+    </div>
+{% endmacro %}

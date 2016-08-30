@@ -1,0 +1,16 @@
+{% macro render_tags_nav(active=none) %}
+  <ul>
+  {% for tag in site.query('/blog-tags') %}
+    <li{% if tag._id == active %} class="active"{% endif
+      %}><a href="{{ tag|url }}">{{ tag.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_post_list(posts) %}
+  <ul>
+  {% for post in posts %}
+    <li><a href="{{ post|url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}

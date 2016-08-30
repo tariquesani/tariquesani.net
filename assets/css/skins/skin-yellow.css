@@ -1,0 +1,55 @@
+/*
+
+Template: Sam Martin - Personal Vcard Resume HTML Template
+Author: potenzaglobalsolutions.com
+Version: 1.0
+Design and Developed by: potenzaglobalsolutions.com
+
+NOTE: This is color stylesheet of Color Scheme.
+
+*/
+
+/*************************
+		General
+*************************/
+/** selection **/
+*::-moz-selection { background: #323232; color: #fff; text-shadow: none; }
+::-moz-selection { background: #323232; color: #fff; text-shadow: none; }
+::selection { background: #323232; color: #fff; text-shadow: none; }
+
+/** buttton **/
+.button-large a {  background: #ffde00; color: #282828; }
+.button-large a:hover { color: #fff; }
+.button-small a { background: #ffde00; color: #282828; }
+button.button-small:hover { background: #ffde00; color: #282828; }
+ 
+ 
+ /*dark background */
+ .about-social ul li a { background: #fff; }
+ /*background important*/
+ .skill .bar { background: #ffde00 !important; }
+ 
+/*************************
+		 Background
+*************************/
+
+ .section-title-name span, .about-social, .service-block .contact-button, .portfolio-item .item-info .item-link a, .ui-datepicker-today, .date-area, .dateinfo .block > .today, .blog-block .blog-image .blog-date span, .contact-toggle span, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover, .blog-single .contact-form a, .slidebar-tag ul li a:hover, .tags-2 li a:hover { background: #ffde00;}
+
+
+/*************************
+		 Color
+*************************/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav>li>a.active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .menu-footer .social ul li a:hover, .resume-block .resume-name h3, .knowledge ul li span, .isotope-filters button.active, .isotope-filters button:hover, .portfolio-item .item-info span, .portfolio-item .item-info a:hover, .portfolio-item .item-info a:hover span, .date-area > .date, .blog-info .blog-meta p a:hover, .blog-info .blog-content a:hover, .blog-bottom .social ul li a:hover, .testimonials-name h4, .contact .social ul li a:hover, .contact-form h4, .page-header-title .blog-meta p a:hover, .author-details .author-name b, .slidebar-share ul li a:hover, .slidebar h3, .blog-single blockquote p span, .slidebar-link ul li a:hover, .comments-1 .comments-info h4, .comments-1 .comments-info a, .port-post-social a:hover, .slidebar-post .post a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover { color:#ffde00; }
+
+
+/*color black*/
+ .about-social ul li a, .section-title-name span, .service-block .contact-button a span, .portfolio-item .item-info a span, .ui-datepicker-today .ui-state-highlight, .date-area, .blog-block .blog-image .blog-date span, .blog-bottom .button-small a, .contact-toggle span.ti-comments, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover, .blog-single .contact-form a, .slidebar-tag ul li a:hover, .tags-2 li a:hover { color: #282828; }
+ /*color-white*/
+ .about-social ul li a:hover, .service-block .contact-button a:hover span, .blog-single .contact-form a:hover { color: #fff; }
+
+/*************************
+		 Border
+*************************/
+.navbar-default .navbar-nav>li>a.active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a.active, .navbar-default .navbar-nav>li>a:hover,  .contact-form input:focus, .contact-form textarea:focus, .blog-single blockquote, .slidebar-link ul li a:hover, .blog-single .contact-form .section-field input:focus, .blog-single .contact-form .section-field textarea:focus, .slidebar-tag ul li a:hover, .skill-content p, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover { border-color: #ffde00; }
+
+ 

@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Started watching (Press CRTL+C to quit)  "
+while true; do
+
+inotifywait -q -e moved_to -r ./content |
+    while read path action file; do
+        echo "The file '$file' appeared in directory '$path' via '$action'"
+        if [ $file == 'contents.lr' ] 
+
+        then
+        	echo "The file '$file' can't be cropped. Skipping"
+        else	
+        	smartcrop --facedetection --width 825 --height 138 $path/$file $path/banner_$file
+        fi
+    done
+done

@@ -1,0 +1,43 @@
+{% macro render_blog_block(post) %}
+   <div class="col-lg-3 col-md-6 col-sm-6">
+     <div class="blog-block">
+        <div class="blog-image">        
+          {% if post.featured_image %}  
+            {% set featured_image = post.attachments.get(post.featured_image)%}              
+            <img class="img-responsive" src="{{ featured_image.thumbnail(800,600,crop=true)|url }}" alt="">
+          {% endif %}
+           <div class="blog-date">
+            <span>{{post.pub_date.strftime('%b') }} <br/> {{ post.pub_date.strftime('%d') }}</span>
+           </div>
+        </div>
+        <div class="blog-info">
+          <div class="blog-meta">
+            <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
+            <p><span class="ti-folder"></span>
+            {% for c in post.categories %}
+              {% set category = site.get('/blog-categories/'+c) %}
+              {% if category %}
+                <a href="{{ category|url }}" rel="category tag">{{ category.name }}</a>
+              {% endif %}
+            {% endfor%}
+          </div>
+          <div class="blog-content">
+            <a href="{{ post|url }}">{{ post.title }}</a>
+            <p>{{post.excerpt}}</p>
+            <div class="blog-bottom clearfix">
+             <div class="button-small">
+              <a href="{{ post|url }}">Read More..</a>
+              </div>
+            <div class="social pull-right">
+              <ul>
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ post|url(external=true)}}" title="Share on Facebook" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://twitter.com/home?status={{post.title}} {{ post|url(external=true)}}" title="Share on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/share?url={{ post|url(external=true)}}" title="Share on Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>  
+           </div>
+          </div>
+        </div>
+     </div>
+  </div>
+{% endmacro %}

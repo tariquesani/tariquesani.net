@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% from "macros/pagination.html" import render_pagination %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.name }} Archives {% endblock %}
+{% block body %}
+  <header class="page-header">
+    <h1 class="page-title">Category: {{ this.name }}</h1>      
+  </header>
+  {% for child in this.pagination.items %}
+    	{{ render_blog_post(child, from_index=true) }}
+  {% endfor %}
+
+  {% if this.pagination.pages > 1 %}
+  	{{ render_pagination(this.pagination) }}
+  {% endif %}
+{% endblock %}

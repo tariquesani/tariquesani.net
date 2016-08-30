@@ -1,0 +1,16 @@
+{% macro render_category_nav(active=none) %}
+  <ul>
+  {% for category in site.query('/blog-categories') %}
+    <li{% if category._id == active %} class="active"{% endif
+      %}><a href="{{ category|url }}">{{ category.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_post_list(posts) %}
+  <ul>
+  {% for post in posts %}
+    <li><a href="{{ post|url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endmacro %}

@@ -1,0 +1,52 @@
+{% macro render_pagination(pagination) %}
+<div class="col-lg-12 col-md-12 text-center">
+        <ul class="pagination">
+            {% if pagination.has_prev %}
+              <li><a href="{{ pagination.prev|url }}">«</a></li>
+            {% else %}
+              <li class="disabled"><a href="#">«</a></li>
+            {% endif %}
+            {% set this_pages = [] %}
+            {% if pagination.pages <=5 %}    
+              {% for page_number in range(0, pagination.pages)%}
+                {% set x = this_pages.append(page_number+1) %}
+              {% endfor %}
+              {{ render_this_pagination(this_pages,pagination)}}
+            {% elif pagination.page in range(4, pagination.pages-2 )  %}
+                <li><a href="{{ pagination.for_page(1)|url}}">1</a></li>
+                <li class="disabled" ><a href="#">…</a></li>
+                {% set this_pages = [pagination.page-2, pagination.page-1, pagination.page, pagination.page+1, pagination.page+2]%}
+                {{ render_this_pagination(this_pages,pagination)}}
+                <li class="disabled" ><a href="#">…</a></li>
+                <li><a href="{{ pagination.for_page(pagination.pages)|url}}">{{ pagination.pages }}</a></li>
+            {% elif pagination.page in range(0,4) %}
+                {% set this_pages = [1,2,3,4,5] %}
+                {{ render_this_pagination(this_pages,pagination)}}                
+                <li class="disabled" ><a href="#">…</a></li>
+                <li><a href="{{ pagination.for_page(pagination.pages)|url}}">{{ pagination.pages }}</a></li>
+            {% elif pagination.page in range(pagination.pages-2, pagination.pages+1) %}
+              {% set this_pages = [pagination.pages-4,pagination.pages-3,pagination.pages-2,pagination.pages-1, pagination.pages] %}
+                <li><a href="{{ pagination.for_page(1)|url}}">1</a></li>
+                <li class="disabled" ><a href="#">…</a></li>
+                {{ render_this_pagination(this_pages,pagination)}}                
+            {% endif %}
+
+            {% if pagination.has_next %}
+              <li><a href="{{ pagination.next|url }}">»</a></li>
+            {% else %}
+              <li class="disabled"><a href="#">»</a></li>
+            {% endif %}            
+        </ul>
+</div>
+
+{% endmacro %}
+
+{% macro render_this_pagination(this_pages,pagination) %}
+      {% for page_number in this_pages %}
+        {% if pagination.page == page_number %}
+            <li class="active"><a href="#">{{ pagination.page }}</a></li>
+        {% else %}
+            <li><a href="{{ pagination.for_page(page_number)|url}}">{{ page_number }}</a></li>
+        {% endif %}
+      {% endfor %}
+{% endmacro %}
