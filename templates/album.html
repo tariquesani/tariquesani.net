@@ -19,17 +19,8 @@
            <h1>{{ this.title }}</h1>
             <div class="blog-meta">
               <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
-              <p><span class="ti-folder"></span> 
-              {% for c in this.categories %}
-	              {% set category = site.get('/blog-categories/'+c) %}
-	              {% if category %}
-	                <a href="{{ category|url }}" rel="category tag">{{ category.name }}</a>
-	              {% endif %}
-              {% endfor%}
-              </p>
               <p style="color: #ffffff;">
               	<span class="ti-calendar"></span>
-              	{# Link this to month and year archives #}
               	{{this.pub_date.strftime('%B %d, %Y')}}
               </p>
             </div>
@@ -61,22 +52,8 @@
          <div class="port-title">
             <h2>{{ this.title }}</h2>
          </div>
-          <div class="port-meta clearfix">
-            <ul>
-              <li><b>Release:</b><span>07/07/2020 </span></li>
-              <li><b>Client:</b><span>Your client name</span></li>
-              <li><b>Live Demo: </b><span>www.projecturl.com</span></li>
-              <li><b>Date: </b><span>September 26, 2015</span></li>
-              <li><b>Skills: </b><span>Design, Photography, HTML, jQuery</span></li>
-            </ul>
-          </div>
           <div class="port-info">
-              <p>Step out on to the path to your left. Where there is no change. Briefly imagine that you are not going to live and discover your unfulfilled dreams. Instead, you continue doing what you have in the past. What will life be like in 10 years time? Step out, every step you take you get older, days pass, weeks pass. Notice how your body is, how your mind is, how you feel about staying on this path. <br> <br>
-              Walk out into your future to the 10 year point. Walk out 10 years into your future and feel how it feels to carry on doing the same thing. This path is just like today, with one difference: you have 10 fewer years remaining in your life. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life be like?</p>
-
-              <p>Lorem ipsum dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. <br> <br>
-
-              Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative </p>
+              {{ this.body }}
            </div>
        </div>
     </div>
@@ -96,7 +73,7 @@
               <a href="https://www.pinterest.com/tariquesani/"><i class="fa fa-pinterest-p"></i> </a>
               <a href="https://www.instagram.com/tariquesani/"><i class="fa fa-instagram"></i> </a>
           </div>
-          <p>Dr. Tarique Sani has been clicking photographs since his early teens. He learned darkroom techniques of developing film and making prints by himself. He shifted to digital cameras almost as soon as they became available in the consumer market. His first digital camera was Casio QV-100 followed by Casio QV-8000SX.</p>
+          <p>Dr. Tarique Sani has been clicking photographs since his early teens. Self taught in darkroom techniques of developing film and making prints, he shifted to digital cameras almost as soon as they became available in the consumer market. His first digital camera was Casio QV-100 followed by Casio QV-8000SX. He rapidly graduating to a slew of DSLRs from Nikon and then Canon. However Tarique's current favorite camera for capturing  images is an iPhone.</p>
           <p>A serious amateur wildlife photographer. His photographs appear in more than 50 journals and ornithology books across the world. Some of them are on display in various wildlife sanctuaries and museums.</p>
         </div>
       </div>
