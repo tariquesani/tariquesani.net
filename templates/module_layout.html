@@ -74,7 +74,7 @@
       <a class="navbar-brand" href="{{'/'|url}}"><img id="logo_img" src="/images/tariquesani_logo.png" alt=""></a>
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul id="navbar" class="nav navbar-nav navbar-right">
           <li><a href="{{'/'|url}}">Home</a></li>
           {% for path, label in bag('main-nav').iteritems() %}
           <li{% if this.is_child_of(path) %} class="active"{% endif%}>

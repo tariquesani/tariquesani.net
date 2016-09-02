@@ -115,6 +115,7 @@
         $("#contactform").show();
         $("#contactform").find("input, textarea").val("");
         $("#formmessage").html(response).show().delay(2000).fadeOut('slow');
+        grecaptcha.reset();
       }
     });
     e.preventDefault();
@@ -282,7 +283,13 @@ function toggleThatNav() {
     changeToggleClass();
     return false;
   });
-    // Keyboard Esc event support
+  
+  // Open comment form on click of contact menu.
+  $('#navbar a[href="#contact"]').on('click', function(e){
+    toggle.click();
+  });
+
+  // Keyboard Esc event support
   $(document).keyup(function(e) {
     if (e.keyCode == 27) {
       if (menu.hasClass("show-contact")) {
