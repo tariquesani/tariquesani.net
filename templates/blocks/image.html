@@ -1,5 +1,5 @@
 {% set image = record.attachments.get(this.image) %}
-<figure>
+<figure class="img-{{this.alignment}}">
     <img src="{{ image|url }}" alt="" class = "img-responsive">
        <figcaption class="caption">
        {{ this.caption }}

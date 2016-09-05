@@ -692,3 +692,18 @@ figcaption {
 .contact a {
     color: #fff;
 }
+
+.img-center{
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.img-left{
+  float: left;
+  margin-right: 10px;
+}
+
+.img-right{
+  float: right;
+  margin-left: 10px;
+}
