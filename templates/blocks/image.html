@@ -1,7 +1,20 @@
 {% set image = record.attachments.get(this.image) %}
+
+{% if this.size == 'thumbnail'%}
+	{% set image_url = image.thumbnail(200, 200, crop='true') %}
+{% elif this.size == 'medium' %}	
+	{% set image_url = image.thumbnail(800, 600, crop='true') %}
+{% elif this.size == 'large' %}	
+	{% set image_url = image.thumbnail(1024, 768, crop='true') %}	
+{% else %} 
+	{% set image_url = image %}
+{% endif%}
+
 <figure class="img-{{this.alignment}}">
-    <img src="{{ image|url }}" alt="" class = "img-responsive">
+    <img src="{{ image_url|url }}" alt="" class = "img-responsive">
+       {% if this.caption %}
        <figcaption class="caption">
        {{ this.caption }}
        </figcaption>
+       {% endif %}
 </figure>
