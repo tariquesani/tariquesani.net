@@ -1,0 +1,5 @@
+_model: blog-categories
+---
+_slug: blog/category
+---
+_discoverable: no

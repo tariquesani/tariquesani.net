@@ -1,0 +1,62 @@
+title: Bye Bye WordPress
+---
+pub_date: 2016-08-15 10:35
+---
+featured_image: wordpress-logo.jpg
+---
+categories: code-and-programming
+---
+body:
+
+#### heading ####
+text:
+
+Why WordPress? 
+----
+size: 2
+#### text ####
+text: When I switched to WordPress it was out of necessity, I had been keeping a journal for a few years on Live Journal and with the demise of that platform I needed a place to continue keeping those journal entries online. I also needed a place to write new stuff. This domain at the time was hosting just my photography on an instance of Coppermine Photo Gallery, a project I was leading at that point.
+----
+class: left
+#### text ####
+text: WordPress was still in its infancy, it was immensely hackable. Matt was a struggling hacker, and the software was written in PHP. These were reasons enough to start tinkering with WordPress. Additionally, WordPress allowed import of LiveJournal entries. I quickly put together my own theme. Wrote a few plugin and things were smooth...
+----
+class: left
+#### heading ####
+text: Why I still code?
+----
+size: 2
+#### text ####
+text: Let me digress a bit here. The shortest answer to this would be because I really really love to code. Coding was one of my earliest hobbies. Coding involves several other things I like, a bit of writing, a bit of Math, lot of exploration and problem solving. Since most of what I code is scratching a personal itch and open sourced, there is a sense of satisfaction of having created something useful for myself and possibly someone else. This website, at least, to begin with, was just an extension of my need to code.
+----
+class: left
+#### heading ####
+text: Why bye bye WordPress?
+----
+size: 2
+#### text ####
+text: Well, things were almost smooth but not really. There were updates and then security updates and then plugin updates. The Wordpress core started to become very popular, more powerful and in turn more complex. As it stands, WordPress is the most flexible and feature rich CMS that PHP has to offer.
+----
+class: left
+#### text ####
+text: The complexity meant that the easy hackability of Wordpress got lost. Without being able to tinker with tweaking stuff around the website, things became boring. I mostly stopped writing. However lately keeping WordPress has become expensive.
+----
+class: left
+#### text ####
+text: The popularity has come at a price. Wordpress has become the prime target of script kiddies and crackers from across the world. Every website on the Internet is vulnerable to hackers to some degree; however, having a custom website would mean that a hacker would need to target your site specifically. The difference with a WordPress based website is that the cracker can target millions of websites at once, without knowing or caring who they belong to.
+----
+class: left
+#### raw ####
+html: <p>When you start out you, firmly feel that your Wordpress install is impregnable! You update the core regularly, you keep all the plugins updated and things run. Till the time they don't. The first time my site got hacked I was almost in disbelief. I then realized that one of the plugins which had a vulnerability had not been updated by the author. Hey! They give it away for free, don't they? No sweat! I restored a clean copy and installed a security plugin. The plugin scan was taking too many resources. I switched till I found one which suited me. I noticed that the site was attracting too much traffic. It was quickly proven to be malicious bot traffic. After several months it happened again, this time, I outsourced the cleanup and put the site behind a proxy, the so-called website firewall. I, however, did not like the idea. This was a simple personal site. It should not cost this much money and time and headaches. I started looking at alternatives. First I looked at other CMSes, then at static site generators. Static site generators appealed a lot to the hacker me. What I chose ultimately and why is written in a <a href="/refreshed/2016/8/lektor-lessons-learned/" >separate post</a></p>
+#### heading ####
+text: What this does not mean!
+----
+size: 2
+#### text ####
+text:
+
+This does not mean that I will never use WordPress for any site. I would still continue to use WordPress on all sites which require a dynamic CMS. Sites which need content to be updated by non tech people and most of my client sites which need a CMS... 
+----
+class: left
+---
+excerpt: WordPress first became boring and then too expensive for a simple personal website. So I decided to switch to a static site.

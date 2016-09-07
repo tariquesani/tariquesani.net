@@ -1,0 +1,5 @@
+_model: blog-tags
+---
+_slug: blog/tag
+---
+_discoverable: no

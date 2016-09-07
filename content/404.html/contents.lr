@@ -1,0 +1,14 @@
+_model: none
+---
+_template:
+
+404.html
+
+title: Oops! That page can’t be found.
+---
+body:
+
+The page you requested does not exist.  Maybe it has been removed or
+deleted or you made a typo when copy/pasting or typing it.
+---
+_discoverable: no

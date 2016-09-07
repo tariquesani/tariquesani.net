@@ -1,0 +1,35 @@
+title: Hello Lektor
+---
+categories: code-and-programming
+---
+pub_date: 2016-08-19 11:00
+---
+featured_image: Welcome   Lektor Static Content Management System.png
+---
+body:
+
+#### raw ####
+html:
+
+<h2>The search</h2>
+
+<p>Having decided to ditch WordPress as the CMS on my site and use a static site generator, I started my search for one. General reading on the web seemed to all point at <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, I did not like the fact that the content format in Jekyll was mostly fixed. I explored many other systems Hexo, Hugo, Pelican, Hyde, Brunch, Middleman, Harp, Expose, …</p>
+
+<p>A couple of them were in PHP as well and thus tempting, but all of them proved to be rather inflexible and not what I was looking for. Then I remembered <a href="https://kushaldas.in/" target="_blank">Kushal Das</a> used something for his blog. I asked him and he pointed out to a script that he used, but more importantly, he mentioned <a href="https://www.getlektor.com/" target="_blank">Lektor</a>.</p>
+
+<h2>Why Lektor...</h2>
+
+<p>What caught my attention was that Lektor was written by the author of Flask, a Python micro-framework which I love.</p>
+
+<p>The installation was super simple, and I had the quickstart running in minutes. What stood out immediately was that Lektor had an admin interface which opened in the browser and second the build system was incremental and ran as soon as I saved anything in the admin.</p>
+
+<p>Lektor is not a fixed format CMS, but it is more of a framework. From the introduction to Lektor - "You can model your own blog posts and render them with the templates you want to use. There is not a single built-in template that you have to use. The only thing it gives you is a quickstart that sets up the folders and copies default minimalistic templates over."</p>
+
+<h2>The transition</h2>
+<p>I now wanted something which could import WordPress posts into Lektor. Unable to find any such plugin I hacked my own <a href="https://github.com/tariquesani/lektor-exporter" target="_blank">WordPress to Lektor</a> export plugin. The plugin works pretty well, and I could export 1200 posts from my old blog to Lektor. Unfortunately, it turns out that Lektor does not scale well as of now. So I dropped the idea of converting the whole of the old site to Lektor and started afresh. A new design and a new set of functionality.</p>
+
+<p>As I kept creating templates for this site, I kept incorporating more and more features. The <a href="https://github.com/tariquesani/tariquesani.net" target="_blank">complete code for this website</a> is available on GitHub. The generated content is also tracked in a separate Git repo. As of now I have not actually set up a deployment pipeline but will do in due course. For comments I use Disqus, the search is Google Site Search.</p>
+
+<p>The old content was converted to static files using the Simply Static Wordpress plugin. Before turning WordPress to static pages, I switched to Disqus comments and Google Site Search so that visitors do not loose out on these essential functionalities.</p>
+---
+excerpt: Lektor is more of a framework.  You can model your own blog posts and render them with the templates you want to use.
