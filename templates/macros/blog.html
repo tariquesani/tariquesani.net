@@ -7,6 +7,9 @@
   <div class="content">
   {{ post.body }}
   </div><!-- content -->
+  <div class="blog-comments">
+    {{ render_disqus_comments() }}
+  </div>
   </div><!-- col-lg-9 -->
   <div class="col-lg-3 col-md-3">
   {{ render_blog_sidebar(post) }}

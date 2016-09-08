@@ -12,7 +12,7 @@
         </div>
         <div class="blog-info">
           <div class="blog-meta">
-            <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
+            <p><span class="ti-comment-alt"></span> <a href="{{ post|url(external=true) }}#disqus_thread">0</a></p>
             <p><span class="ti-folder"></span>
             {% for c in post.categories %}
               {% set category = site.get('/blog-categories/'+c) %}

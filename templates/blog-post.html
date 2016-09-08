@@ -19,7 +19,7 @@
         <div class="page-header-title">
            <h1>{{ this.title }}</h1>
             <div class="blog-meta">
-              <p><span class="ti-comment-alt"></span> <a href="#">4</a></p>
+              <p><span class="ti-comment-alt"></span> <a href="{{ this|url(external=true) }}#disqus_thread">0</a></p>
               <p><span class="ti-folder"></span> 
               {% for c in this.categories %}
 	              {% set category = site.get('/blog-categories/'+c) %}

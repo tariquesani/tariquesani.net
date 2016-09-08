@@ -1,3 +1,6 @@
 [project]
 name = New Blog
 url = http://tariquesani.net
+
+[packages]
+lektor-disqus-comments = 0.1
