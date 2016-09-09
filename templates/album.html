@@ -1,3 +1,4 @@
+{% from "macros/sharethis.html" import render_sharethis %}
 {% extends "module_layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block intro %}
@@ -76,6 +77,11 @@
           <p>Dr. Tarique Sani has been clicking photographs since his early teens. Self taught in darkroom techniques of developing film and making prints, he shifted to digital cameras almost as soon as they became available in the consumer market. His first digital camera was Casio QV-100 followed by Casio QV-8000SX. He rapidly graduating to a slew of DSLRs from Nikon and then Canon. However Tarique's current favorite camera for capturing  images is an iPhone.</p>
           <p>A serious amateur wildlife photographer. His photographs appear in more than 50 journals and ornithology books across the world. Some of them are on display in various wildlife sanctuaries and museums.</p>
         </div>
+      </div>
+      <div>
+        <hr>
+        <p>Sharing in caring</p>
+        {{ render_sharethis() }}
       </div>
       <div class="blog-comments">
         {{ render_disqus_comments() }}

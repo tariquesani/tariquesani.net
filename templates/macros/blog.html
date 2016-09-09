@@ -1,3 +1,4 @@
+{% from "macros/sharethis.html" import render_sharethis %}
 {% macro render_blog_post(post, from_index=false) %}
 {% from "macros/blog-sidebar.html" import render_blog_sidebar %}
 <section class="blog blog-single white-bg page-section-pt">
@@ -7,6 +8,11 @@
   <div class="content">
   {{ post.body }}
   </div><!-- content -->
+  <div>
+    <hr>
+    <p>Sharing in caring</p>
+    {{ render_sharethis() }}
+  </div>
   <div class="blog-comments">
     {{ render_disqus_comments() }}
   </div>
