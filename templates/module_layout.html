@@ -39,8 +39,14 @@
 <!-- ShareThis js -->
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "44cf95bb-b309-44df-b198-55070bcbc7e0", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<script type="text/javascript">stLight.options({publisher: "44cf95bb-b309-44df-b198-55070bcbc7e0", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <!-- ShareThis js ends-->
+
+<meta property="og:url"                content="{% block og_url%}http://tariquesani.net/{% endblock %}" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{% block og_title%}Tarique Sani - Welcome{% endblock %}" />
+<meta property="og:description"        content="{% block og_description%}Pediatrician and a Forensic Expert. A passionate PHP geek. Currently CTO, SANIsoft. Also a cyclist,  photographer, bird watcher, nature lover and a FOSS enthusiast.{% endblock %}" />
+<meta property="og:image"              content="{% block og_image%}http://tariquesani.net/images/my-photo.jpg{% endblock %}" />
 
 </head>
 
