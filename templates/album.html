@@ -1,6 +1,11 @@
 {% from "macros/sharethis.html" import render_sharethis %}
 {% extends "module_layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
+{% block og_url%}{{ this|url(external=true) }}{% endblock %}
+{% block og_title%}{{ this.title }}{% endblock %}
+{% block og_description%}{{ this.body|striptags|truncate(255, True)  }}{% endblock %}
+{% set image = this.attachments.get(this.featured_image) %}
+{% block og_image%}{{ image.thumbnail(800,600,crop=true)|url(external=true) }}{% endblock %}
 {% block intro %}
   {% set featured_image = this.attachments.get(this.featured_image) %}
   <div class="page-header bg gradient-01" style="background: url('{{ featured_image.thumbnail(1920,800,crop=true) | url }}')">

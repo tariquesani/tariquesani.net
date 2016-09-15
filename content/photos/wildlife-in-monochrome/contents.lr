@@ -15,14 +15,6 @@ size: original
 ----
 caption: The elephant charge
 #### image ####
-image: wm__dsc7316_bw.jpg
-----
-alignment: default
-----
-size: original
-----
-caption: Zebra Crossing
-#### image ####
 image: wm_3f1j9816_bw.jpg
 ----
 alignment: default
@@ -30,6 +22,48 @@ alignment: default
 size: original
 ----
 caption: Yawn
+#### image ####
+image: 4747479721_6c176ce376_o.jpg
+----
+alignment: left
+----
+size: original
+----
+caption: Charge of the Black Rhino
+#### image ####
+image: 4748114956_4bd7a92beb_o.jpg
+----
+alignment: left
+----
+size: original
+----
+caption: African Buffalo
+#### image ####
+image: 5299946166_4cf1672a2a_o.jpg
+----
+alignment: left
+----
+size: original
+----
+caption: Giraffe Graph
+#### image ####
+image: 6829146166_a9413fe188_k.jpg
+----
+alignment: left
+----
+size: original
+----
+caption:
+
+Mirrored 
+#### image ####
+image: 6132434912_62241304f4_o.jpg
+----
+alignment: left
+----
+size: original
+----
+caption: Cheetah!
 ---
 body:
 
