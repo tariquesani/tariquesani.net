@@ -707,3 +707,9 @@ figcaption {
   float: right;
   margin-left: 10px;
 }
+
+#nav-row{
+  font-size: large;
+  clear: both;
+  padding-top: 20px;
+}

@@ -8,16 +8,16 @@
   <div class="content">
   {{ post.body }}
   </div><!-- content -->
-  <div class="row">
+  <div class="row" id="nav-row">
     <div class="col-lg-6 col-md-6">
     {% set siblings = post.get_siblings() %}
     {% if siblings.prev_page %}
-      <a href="{{ siblings.prev_page|url }}">&laquo; Next Post</a>
+      <a href="{{ siblings.prev_page|url }}" title="{{ siblings.prev_page.title }}" >&laquo; Next Post</a>
     {% endif %}
     </div>
     <div class="col-lg-6 col-md-6 text-right">
     {% if siblings.next_page %}  
-      <a href="{{ siblings.next_page|url }}">Previous Post&raquo;</a>
+      <a href="{{ siblings.next_page|url }}" title="{{ siblings.next_page.title }}" >Previous Post&raquo;</a>
     {% endif %}
     </div>
   </div>
