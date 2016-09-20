@@ -1,13 +1,53 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
+{% extends "module_layout.html" %}
+{% from "macros/blog-block.html" import render_blog_block %}
 {% block title %}{{ this.date|dateformat('MMMM yyyy') }} {% endblock %}
+
+{% block intro %}
+  <div class="page-header bg gradient-01">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="top-bar clearfix">
+          <div class="back-home pull-left">
+            <a href="{{'/'| url }}"><span class="ti-angle-left"></span> back to home</a>
+          </div>
+          <ul class="breadcrumb pull-right">
+            <li><a href="{{'/'| url }}"><span class="ti-home"></span> Home</a></li>
+            <li><a href="{{'/refreshed/'| url }}">Blog</a></li>
+            <li class="active">Archive</li>        
+          </ul>
+        </div>
+        <div class="page-header-title">
+           <h1>Archive: {{ this.date|dateformat('MMMM yyyy') }}</h1>
+           <span>Tarique Sani's Blog</span>
+        </div>
+       </div>
+    </div>
+  </div>
+{% endblock%}
+
 {% block body %}
-  <header class="page-header">
-    <h1 class="page-title">Month: {{ this.date|dateformat('MMMM yyyy') }}</h1>      
-  </header>
-  
-  {% for post in this.items %}
-	{{ render_blog_post(post, from_index=true) }}
+ <section class="blog blog-page white-bg page-section">
+ <div class="container-fluid">
+  {% for child in this.items %}
+  	{% if loop.index is equalto 1 %}
+  		<div class="row"><!-- Index is 1 -->
+  	{% endif%}	
+    	{{ render_blog_block(child) }}
+    {% if loop.index is divisibleby 2 %}
+      <div class="clearfix visible-sm-block"></div>
+      <div class="clearfix visible-md-block"></div>
+    {% endif %}
+  	{% if loop.index is divisibleby 4 %}  	    
+  		</div><!-- End row -->
+  		{% if loop.length > loop.index %}
+  			<div class="row"> <!-- {{ loop.index }} -->
+  		{% endif %}
+  	{% endif%}
+  	{% if (loop.last) and (not (loop.index is divisibleby 4)) %}
+  			</div><!-- End row in last-->
+  	{% endif %}
+  	
   {% endfor %}
-  
+</div>
+</section>
 {% endblock %}

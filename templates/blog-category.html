@@ -1,16 +1,57 @@
-{% extends "layout.html" %}
+{% extends "module_layout.html" %}
 {% from "macros/pagination.html" import render_pagination %}
-{% from "macros/blog.html" import render_blog_post %}
-{% block title %}{{ this.name }} Archives {% endblock %}
-{% block body %}
-  <header class="page-header">
-    <h1 class="page-title">Category: {{ this.name }}</h1>      
-  </header>
-  {% for child in this.pagination.items %}
-    	{{ render_blog_post(child, from_index=true) }}
-  {% endfor %}
+{% from "macros/blog-block.html" import render_blog_block %}
+{% block title %}Category: {{ this.name }} - Tarique Sani{% endblock %}
 
+{% block intro %}
+  <div class="page-header bg gradient-01">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="top-bar clearfix">
+          <div class="back-home pull-left">
+            <a href="{{'/'| url }}"><span class="ti-angle-left"></span> back to home</a>
+          </div>
+          <ul class="breadcrumb pull-right">
+            <li><a href="{{'/'| url }}"><span class="ti-home"></span> Home</a></li>
+            <li><a href="{{'/refreshed/'| url }}">Blog</a></li>
+            <li class="active">Category</li>        
+          </ul>
+        </div>
+        <div class="page-header-title">
+           <h1>Category: {{ this.name }}</h1>
+           <span>Tarique Sani's Blog</span>
+        </div>
+       </div>
+    </div>
+  </div>
+{% endblock%}
+
+{% block body %}
+ <section class="blog blog-page white-bg page-section">
+ <div class="container-fluid">
+  {% for child in this.pagination.items %}
+  	{% if loop.index is equalto 1 %}
+  		<div class="row"><!-- Index is 1 -->
+  	{% endif%}	
+    	{{ render_blog_block(child) }}
+    {% if loop.index is divisibleby 2 %}
+      <div class="clearfix visible-sm-block"></div>
+      <div class="clearfix visible-md-block"></div>
+    {% endif %}
+  	{% if loop.index is divisibleby 4 %}  	    
+  		</div><!-- End row -->
+  		{% if loop.length > loop.index %}
+  			<div class="row"> <!-- {{ loop.index }} -->
+  		{% endif %}
+  	{% endif%}
+  	{% if (loop.last) and (not (loop.index is divisibleby 4)) %}
+  			</div><!-- End row in last-->
+  	{% endif %}
+  	
+  {% endfor %}
   {% if this.pagination.pages > 1 %}
-  	{{ render_pagination(this.pagination) }}
+    {{ render_pagination(this.pagination) }}
   {% endif %}
+</div>
+</section>
 {% endblock %}
