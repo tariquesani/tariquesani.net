@@ -41,14 +41,13 @@
   <div class="container-fluid">
      <div class="row">
       <div class="col-lg-6 col-md-6 popup-album">
-          {% for blk in this.images.blocks %}
-            {%set image = this.attachments.get(blk.image)%}
+          {% for image in this.attachments.images %}      
             {% if loop.index == 1 %}
-              <a href="{{image|url}}" class="album-img thumbnail" title="{{blk.caption|striptags}}" ><img src="{{ image.thumbnail(800)|url}}" alt="{{blk.caption|striptags}}" class="img-responsive"></a>
+              <a href="{{image|url}}" class="album-img thumbnail" title="{{image.exif.description}}" ><img src="{{ image.thumbnail(800)|url}}" alt="{{image.exif.description}}" class="img-responsive"></a>
             {% else %}
               <div class="col-lg-3 col-sm-4 col-6">
-              <a href="{{image|url}}" title="{{blk.caption}}" class="album-img thumbnail">
-              <img src="{{image.thumbnail(400,400,crop=true)|url}}" alt="{{blk.caption|striptags}}" class="img-responsive">
+              <a href="{{image|url}}" title="{{image.exif.description}}" class="album-img thumbnail">
+              <img src="{{image.thumbnail(400,400,crop=true)|url}}" alt="{{image.exif.description}}" class="img-responsive">
               </a>
               </div>
             {% endif %}
