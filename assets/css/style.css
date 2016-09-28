@@ -723,3 +723,13 @@ background: url('/images/home/3A6A9323.jpg');
     background: url('/images/home/3A6A9323v.jpg');
   } 
 }
+
+.thumbnail img
+{
+    width: 100%;
+}
+
+.thumbnail
+{
+  margin-bottom: 0px;
+}

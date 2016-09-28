@@ -41,17 +41,19 @@
   <div class="container-fluid">
      <div class="row">
       <div class="col-lg-6 col-md-6 popup-album">
+      <div class="grid">
           {% for image in this.attachments.images %}      
             {% if loop.index == 1 %}
-              <a href="{{image|url}}" class="album-img thumbnail" title="{{image.exif.description}}" ><img src="{{ image.thumbnail(800)|url}}" alt="{{image.exif.description}}" class="img-responsive"></a>
+              <a href="{{image|url}}" class="album-img" title="{{image.exif.description}}" ><img src="{{ image.thumbnail(800)|url}}" alt="{{image.exif.description}}" class="img-responsive thumbnail"></a>
             {% else %}
-              <div class="col-lg-3 col-sm-4 col-6">
-              <a href="{{image|url}}" title="{{image.exif.description}}" class="album-img thumbnail">
-              <img src="{{image.thumbnail(400,400,crop=true)|url}}" alt="{{image.exif.description}}" class="img-responsive">
+              <div class="col-lg-3 col-sm-4 col-6 thumbnail">
+              <a href="{{image|url}}" title="{{image.exif.description}}" class="album-img">
+              <img src="{{image.thumbnail(400)|url}}" alt="{{image.exif.description}}" class="img-responsive">
               </a>
               </div>
             {% endif %}
           {% endfor%}
+      </div>          
       </div>
       <div class="col-lg-6 col-md-6 clearfix">
          <div class="port-title">
@@ -96,3 +98,5 @@
   </div>
 </section>
 {% endblock %}
+<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
