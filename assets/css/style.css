@@ -52,7 +52,7 @@ a, button, input { outline: medium none !important; -webkit-transition: all 0.5s
 a:focus, a:hover { outline: medium none !important; text-decoration: none; -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;  }
 ol, ul { padding: 0px; margin: 0px; }
-li { list-style: none !important; }
+
 p { font-size: 14px; color: #9ea8b6; line-height: 24px; }
 /*selection*/
 *::-moz-selection { background: #000; color: #ffffff; text-shadow: none; }
@@ -724,12 +724,15 @@ background: url('/images/home/3A6A9323.jpg');
   } 
 }
 
-.thumbnail img
-{
+.thumbnail img{
     width: 100%;
 }
 
-.thumbnail
-{
+.thumbnail{
   margin-bottom: 0px;
+}
+
+li{ /* list-style: none !important; */
+    color: #9ea8b6;
+    margin-left: 18px;
 }
