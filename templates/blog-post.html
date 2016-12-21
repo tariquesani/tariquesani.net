@@ -8,7 +8,7 @@
 {% block og_image%}{{ image.thumbnail(800,600,crop=true)|url(external=true) }}{% endblock %}
 {% block intro %}
   {% set image = this.attachments.get(this.featured_image) %}
-  <div class="page-header bg gradient-01" style="background: url('{{ image.thumbnail(1920,800,crop=true, quality=40) | url }}')">
+  <div class="page-header bg gradient-01" style="background: url('{{ image.thumbnail(1920,800,crop=true,quality=40) | url }}')">
       <div class="container-fluid">
       <div class="row">
         <div class="top-bar clearfix">
