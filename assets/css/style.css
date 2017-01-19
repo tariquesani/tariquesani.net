@@ -667,6 +667,7 @@ figcaption {
     caption-side: bottom;
     background: #F4F5F6;
     padding: 0 5px 5px;
+    margin-bottom: 10px;
 }​
 
 .mfp-figure figure {
