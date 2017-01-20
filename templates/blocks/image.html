@@ -11,7 +11,13 @@
 {% endif%}
 
 <figure class="img-{{this.alignment}}">
+{% if this.size != 'original'%}
+  <a href="{{ image|url }}" target="_blank">
+{% endif%}
     <img src="{{ image_url|url }}" alt="" class = "img-responsive">
+{% if this.size != 'original'%}
+  </a>
+{% endif%}    
        {% if this.caption %}
        <figcaption class="caption">
        {{ this.caption }}
