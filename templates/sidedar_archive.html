@@ -1,6 +1,6 @@
 {% set posts = site.query('/blog').include_hidden(false).all() %}
 {% if posts %}
-  {% set new_month = '' %}
+  {% set new_month = {1:"~"} %}
   {#  create a dict or it will not work #}
   {% set x = {1:2} %}
   {% for post in posts %}
@@ -16,17 +16,17 @@
     {# Silly way to update a dict #}
     {% set _dummy = x.update({this_month:this_month_count}) %}
     {# Check if the month has changed? #}
-    {% if this_month != new_month %}
+    {% if this_month != new_month[1] %}
       {# Skip the blank first month #}
-      {% if x[new_month] %}
-        <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month }} ({{x[new_month]}})</a></li>
+      {% if x[new_month[1]] %}
+        <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month[1] }} ({{x[new_month[1]]}})</a></li>
       {% endif %}
-      {% set new_month =  this_month %}
+      {% set _dummy =  new_month.update({1:this_month}) %}
       {% set new_month_number =  this_month_number %}
       {% set new_year =  this_year %}
     {% endif%}
     {% if(loop.last) %}
-       <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month }} ({{x[new_month]}})</a></li>
+       <li><a href="/refreshed/{{ new_year }}/{{ new_month_number }}/">{{ new_month[1] }} ({{x[new_month[1]]}})</a></li>
     {% endif %}
   {% endfor %}
 {% endif %}
