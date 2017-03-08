@@ -655,6 +655,7 @@ figure {
    padding: 0;
    font-size: .875em;
    display: table;
+   max-width: 100%
 }
 
 figure img {
@@ -663,12 +664,20 @@ figure img {
 }
 
 figcaption {
-    display: table-caption;
+    display: block;
     caption-side: bottom;
     background: #F4F5F6;
-    padding: 0 5px 5px;
+    padding: 5px 5px;
     margin-bottom: 10px;
 }​
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;    
+}
+
+.wp-caption {
+  max-width: 100%;
+}
 
 .mfp-figure figure {
     margin: 0; 
@@ -697,6 +706,20 @@ figcaption {
 .img-center{
   margin-left: auto; 
   margin-right: auto;
+}
+
+/* Worpress compatible image alignment classes */
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 10px;
 }
 
 .img-left{
