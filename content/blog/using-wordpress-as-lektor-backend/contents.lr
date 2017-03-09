@@ -1,0 +1,27 @@
+title: Using WordPress as Lektor backend
+---
+pub_date: 2017-03-08
+---
+author: tariquesani
+---
+excerpt:
+
+Lektorify is a plugin which ideally should never be needed but it is there for now. 
+---
+categories: code-and-programming
+---
+featured_image: lektorify_settings.png
+---
+body:
+
+#### raw ####
+html:
+
+<p>This is a plugin which ideally should never be needed but I had to write it because &#8220;I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail&#8221;.</p>
+<p>Some time ago I shifted this site to use the static CMS Lektor. Lektor is written in a combination of Python and Javascript. For some time it was the perfect tool which fulfilled all my needs. I could use the features to create any kind of content I wanted. With time, creating posts with images of various types and sizes started seeming like a chore. I had to admit that Lektor at this point of time lacks a good editor on the admin side. The ideal course would be that I write code to add a kickass editor to Lektor and I have recently been admitted to the development team as well but unfortunately my python and ReactJS skills at this point are a bit lacking. Also, it was more imperative that I create content cycling related for my blog than spend time learning. I will get to that eventually but the hacker me was more tickled at the rather paradoxical idea of  using WordPress as the backend to create Lektor content. I also knew that it will not take me more than a few hours to hammer out a plugin. <a href="https://github.com/tariquesani/lektorify" target="_blank">Lektorify</a> &#8211; is the result of three hours of banging.</p>
+<p>WordPress is installed on my Desktop. Once <a href="https://github.com/tariquesani/lektorify" target="_blank">Lektorify</a> plugin is installed and activated all you need to do is give it the path of your Lektor project on the settings page. Whenever you create a new post or update a post, the plugin will create proper directories, the content.lr file and copy all the images attached to post to the directory.</p>
+<p>Rest of my workflow which was already in place consists of running lektor build command with &#8211;watch flag and finally do a git commit and git push to deploy/publish the post on to the remote site.</p>
+<p>Download: <a href="https://github.com/tariquesani/lektorify" target="_blank">https://github.com/tariquesani/lektorify</a></p>
+<p>&nbsp;</p>
+<figure id="attachment_120" style="width: 954px" class="wp-caption aligncenter"><img class="img-responsive size-full wp-image-120" src="lektorify_settings.png" alt="Lektorify Settings Page" width="954" height="641" /><figcaption class="wp-caption-text">Lektorify Settings page is minimal</figcaption></figure>
+<p>&nbsp;</p>
