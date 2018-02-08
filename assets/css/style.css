@@ -53,7 +53,7 @@ a:focus, a:hover { outline: medium none !important; text-decoration: none; -webk
   transition: all 0.5s ease-out 0s;  }
 ol, ul { padding: 0px; margin: 0px; }
 
-p { font-size: 14px; color: #9ea8b6; line-height: 24px; }
+p { font-size: 14px; color: #000; line-height: 24px; }
 /*selection*/
 *::-moz-selection { background: #000; color: #ffffff; text-shadow: none; }
 ::-moz-selection { background: #000; color: #ffffff; text-shadow: none; }
